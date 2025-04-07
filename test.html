@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚠️ SYSTEM COMPROMISED ⚠️</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: monospace;
+      text-align: center;
+      margin-top: 20%;
+    }
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+  </style>
+  <script>
+    //Hidden in plain sight; Encoded in Base64
+    // Fake error logging system
+    console.groupCollapsed('%c[SECURITY ALERT]', 'color: red; font-weight: bold;');
+    console.error('Unauthorized access detected!');
+    console.warn('Intruder Profile:');
+    console.table({
+      'Username': 'Q1RGSDR4MHJKM3IzbXk=',
+      'IP': '192.168.4.71',
+      'User-Agent': navigator.userAgent
+    });
+    console.debug('%c[DEBUG] Look deeper in the shadows...', 'color: #666;');
+    console.groupEnd();
+
+    // Fake error handler
+    setTimeout(() => {
+      try {
+        throw new Error('SecurityViolation: User Q1RGSDR4MHJKM3IzbXk= attempted privilege escalation');
+      } catch (e) {
+        e.name = 'SystemAlert';
+        console.error(e);
+      }
+    }, 3000);
+  </script>
+</head>
+<body>
+  <h1 class="blink">⚠️ YOUR SYSTEM HAS BEEN COMPROMISED ⚠️</h1>
+  <p>All your data has been encrypted. Contact support immediately.</p>
+  <!-- Hex-encoded (43 68 65 63 6B 20 74 68 65 20 63 6F 6E 73 6F 6C 65) -->
+  <p><small>Error Code: 0x436865636B2074686520636F6E736F6C65</small></p>
+
+  <div style="display:none;">
+    <p>Timestamp: <span id="timestamp"></span></p>
+  </div>
+
+  <script>
+    // Timestamp clue only
+    document.getElementById('timestamp').textContent = new Date().toISOString();
+  </script>
+</body>
+</html>
